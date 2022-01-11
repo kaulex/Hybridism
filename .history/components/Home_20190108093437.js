@@ -1,0 +1,51 @@
+import React, { Component } from 'react'
+import { Text, StyleSheet, View, Button, TouchableOpacity,  } from 'react-native'
+
+export default class Home extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+
+        {/**BUTTON */}
+        <TouchableOpacity 
+        style={styles.button}   
+        onPress={()=>this.props.navigation.navigate("Stock")}
+        ><Text style={styles.txt}>Stock</Text></TouchableOpacity>
+
+        {/**BUTTON */}
+        <TouchableOpacity 
+        style={styles.button}   
+        onPress={()=>this.props.navigation.navigate("AppPhoto")}
+        ><Text style={styles.txt}>QR Code</Text></TouchableOpacity>
+
+      </View>
+    )
+  }
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center', 
+    alignItems: 'center',  
+  },
+  button: {
+    height: 50,
+    width:"75%",
+    backgroundColor: "#eee",
+    justifyContent: 'center',    
+    alignItems: 'center',  
+    margin: 10, 
+    borderWidth: 2,
+    borderRadius: 20,
+    borderColor: '#00c7ff', 
+  },
+  txt: {
+    color: "#00c7ff",
+    fontSize: 20,    
+  },
+});
+
+

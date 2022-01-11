@@ -1,0 +1,62 @@
+// Navigation/Navigation.js
+import { createStackNavigator, createAppContainer } from 'react-navigation'
+import Connexion from '../components/Connexion'
+import AppPhoto from '../components/AppPhoto'
+import Stock from '../components/Stock'
+import Home from '../components/Home'
+import ProduitDetail from '../components/ProduitDetail'
+
+const SearchStackNavigator = createStackNavigator({
+
+  Connexion: { 
+    screen: Connexion,
+    navigationOptions: {
+      title: 'Connexion'
+    }
+  },
+
+  Accueil: { 
+    screen: Bienvenue, 
+    navigationOptions: {
+      title: '',
+      headerTransparent: true,
+      headerStyle: {
+        
+      },
+      headerTintColor: 'white',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  },
+  
+  Home: { 
+    screen: Home,
+    navigationOptions: {
+      title: 'Home'
+    }
+  },  
+  
+  AppPhoto: { 
+    screen: AppPhoto,
+    navigationOptions: {
+      title: 'AppPhoto'
+    }
+  },  
+  
+  Stock: { 
+    screen: Stock,
+    navigationOptions: {
+      title: 'Stock'
+    }
+  },
+  ProduitDetail:{
+    screen: ProduitDetail,
+    navigationOptions:{
+      title: 'ProduitDetail'
+    }
+  }  
+
+})
+
+export default createAppContainer(SearchStackNavigator)
